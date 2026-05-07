@@ -12,7 +12,7 @@ app.use(express.json());
 ================================= */
 
 const getAllBookings = require('./bookings/getAllBookings');
-const getBookingById = require('./bookings/getBookingById');
+const getBookingById = require('./bookings/getBookingbyId');
 const createBooking = require('./bookings/createBooking');
 const updateBooking = require('./bookings/updateBooking');
 const deleteBooking = require('./bookings/deleteBooking');
