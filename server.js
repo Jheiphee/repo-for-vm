@@ -140,6 +140,27 @@ app.delete('/rooms/:id', deleteRoom);
 
 
 /* =================================
+   ANALYTICS
+================================= */
+
+const bestRoomBookings = require('./analytics/bestRoomBookings');
+const bestRoomRevenue = require('./analytics/bestRoomRevenue');
+const topBookingDate = require('./analytics/topBookingDate');
+const topGuestPayment = require('./analytics/topGuestPayment');
+const topRevenueDate = require('./analytics/topRevenueDate');
+
+app.get('/analytics/best-room-bookings', bestRoomBookings);
+
+app.get('/analytics/best-room-revenue', bestRoomRevenue);
+
+app.get('/analytics/top-booking-date', topBookingDate);
+
+app.get('/analytics/top-guest-payment', topGuestPayment);
+
+app.get('/analytics/top-revenue-date', topRevenueDate);
+
+
+/* =================================
    SERVER
 ================================= */
 
