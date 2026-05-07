@@ -35,10 +35,23 @@ const updateEmployment = require('./employment_details/updateEmployment_details'
 const deleteEmployment = require('./employment_details/deleteEmployment_details');
 
 app.get('/employment-details', getAllEmployments);
-app.get('/employment-details/:id', getEmploymentById);
+
+app.get(
+  '/employment-details/:employee_id',
+  getEmploymentById
+);
+
 app.post('/employment-details', createEmployment);
-app.put('/employment-details/:id', updateEmployment);
-app.delete('/employment-details/:id', deleteEmployment);
+
+app.put(
+  '/employment-details/:employee_id',
+  updateEmployment
+);
+
+app.delete(
+  '/employment-details/:employee_id',
+  deleteEmployment
+);
 
 
 /* =================================
